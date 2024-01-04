@@ -1,0 +1,22 @@
+{
+    "Subscriptions" : [
+        "List of Azure Subscriptions"
+    ],
+    "InstanceFile" : "instances.json",
+    "IngestCluster" : "https://ingest-<cluster>.<region>.kusto.windows.net",
+    "IngestDb" : "YOUR_DATABASE_NAME",
+    "Tables" : {
+        "Instance" :{
+            "Table" : "InstanceView",
+            "Columns" : ["Timestamp", "Subscription", "Instance", "Group"]
+        },
+        "Cluster" :{
+            "Table" : "ClusterView",
+            "Columns" : ["Timestamp", "Subscription", "Instance", "Cluster"]
+        },
+        "Partition" :{
+            "Table" : "PartitionView",
+            "Columns" : ["Timestamp", "Subscription", "Instance", "Partition"]
+        }
+    }
+}
