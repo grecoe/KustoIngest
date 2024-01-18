@@ -36,6 +36,8 @@ This Kusto environment is where data will be ingested. You will need to ensure t
 .create table ClusterView ( Timestamp:datetime, Subscription:string, Instance:string, Cluster:string)
 
 .create table PartitionView ( Timestamp:datetime, Subscription:string, Instance:string, Partition:string)
+
+.create table DCPView ( Timestamp:datetime, Subscription:string, User:string, Group:string, SubType:string, Version:string)
 ```
 
 ### Modify the program/settings.json file
